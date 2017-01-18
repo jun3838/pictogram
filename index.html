@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pictogram</title>
+<link rel="stylesheet" type="text/css" href="pictogram.css">
+<script src="pictogram.js"></script>
+<script>
+var charts = [];
+var startX, startY, initialWidth, initialHeight, whichHandler, mouseOffsetX, mouseOffsetY;
+var resizing = false;
+window.onload = function(){
+	init();
+}
+</script>
+</head>
+<body>
+	<div id="editor">
+
+	</div><!-- eidtor -->
+	<div id="btnNewChart">new chart</div>
+	
+	<div id="controlpanel">		
+		<p>chart color:</p>	
+		<div class="chartcolor colorselect"></div>	
+		<p>row:</p>		
+		<button id="btnMinusRow" class="minus">-</button><button id="btnPlusRow" class="plus">+</button>
+		<div id="quantityCP">
+			<p>icon:</p>
+			<div id="iconpicker">
+				<select>
+					<option value="square">Square</option>
+					<option value="triangle">Triangle</option>
+					<option value="circle">Circle</option>
+				</select>
+			</div><!-- iconpicker -->	
+			<p>icon color:</p>		
+			<div class="iconcolor colorselect"></div>	
+			<p>quantity:</p>		
+			<button id="btnMinus" class="minus">-</button><button id="btnPlus" class="plus">+</button>
+		</div><!-- quantityCP -->
+		<canvas id="colorpicker" width="180" height="116"></canvas><!-- colorpicker -->				
+	</div>		
+</body>
+</html>

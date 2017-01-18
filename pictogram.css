@@ -1,0 +1,48 @@
+* { padding: 0; margin: 0; font-family: 'Arial';  
+	-moz-user-select: -moz-none;
+   	-khtml-user-select: none;
+   	-webkit-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none; 
+}
+body, html { width: 100%; height: 100%; }
+#editor { background-color: #F2E8D5; width: 100%; height: 100%; }
+#controlpanel { position: absolute; top: 100px; left: 5px; width: 110px; text-align: center; display: none; padding: 10px; background-color: #FFF; box-shadow: 0 0 10px 0px #808080; border-radius: 5px; z-index: 10; }
+#controlpanel #quantityCP { display: none; }
+#controlpanel p { text-align: left; font-size: 12px; font-style: italic; }
+#controlpanel .colorselect { text-align: center; height: 20px; border: 1px solid silver; margin: 5px 0; line-height: 20px; font-size: 12px; cursor: pointer; color: gray; }
+#controlpanel .colorselect.editing { border: 2px solid gray; }
+#controlpanel select { width: 100%; margin: 5px 0; }
+#controlpanel .minus { width: 35%; margin: 5px 5px; }
+#controlpanel .plus { width: 35%; margin: 5px 5px; }
+
+#colorpicker { position: absolute; margin: auto; top: 0px; left: 140px; display: none; z-index: 10; }
+
+#btnNewChart { border-radius: 5px; border: 2px solid transparent; background-color: #EDA745; color: white; font-weight: bold; width: 100px; text-align: center; height: 30px; line-height: 30px; margin: 10px 0; cursor: pointer; position: absolute; top: 5px; left: 5px; }
+#btnNewChart:hover { color: #EDA745; background-color: white; border: 2px solid #EDA745; }
+#iconpicker { position: relative }
+#iconpicker #square { border: 1px dashed #39B54A; background-color: #39B54A; width: 30px; height: 30px; display: inline-block; }
+#iconpicker #triangle { border-bottom: 30px dashed #39B54A; border-left: 15px solid transparent; border-right: 15px solid transparent; width: 0px; height: 0px; display: inline-block; }
+#iconpicker #circle { border: 1px solid #39B54A; background-color: #39B54A; width: 30px; height: 30px; border-radius: 50%; display: inline-block; }
+
+.container { height: auto; position: absolute; border: 0px solid transparent; border-radius: 5px; padding: 5px; background-color: white; box-shadow: 1px 0px 10px 0px silver; z-index: 1; }
+.container .charttitle { font-size: 20px; height: 20px; font-weight: bold; position: absolute; top: -30px; color: #868694; font-style: italic; background-color: transparent; border: 0px; width: 100%; }
+.container.selected { z-index: 2; border: 0px solid gray; }
+.header { width: 100%; height: 20px; text-align: center; font-weight: bold; font-size: 20px; }
+.separator { height: 0px; border-bottom: 1px dashed silver; margin-bottom: 0px; }
+.row { position: relative; height: 50px; width: 100%; padding: 10px 0; }
+.label { width: 25%; height: 100%; line-height: 15px; font-size: 15px; text-align: center; border: 0px; border-right: 1px solid silver; float: left; background-color: transparent; }
+.quantity { width: 70%; height: 100%; overflow: hidden }
+.quantity.editing { outline: #96CCDD solid 2px }
+.quantity .item { display: inline-block; height: 100%; margin: 0 2px;}
+.quantity .square { width: 0px; height: 0px; display: inline-block; }
+.quantity .triangle { width: 0px; height: 0px; display: inline-block; }
+.quantity .circle { width: 0px; height: 0px; border-radius: 50%; display: inline-block; }
+
+/*resize handle*/
+.resizeHandle { width: 10px; height: 10px; border-radius: 30%; border: 1px solid gray; background-color: white; display: none; }
+.selected .resizeHandle { display: block; }
+.resizeHandle-tl { cursor: nw-resize; }
+.resizeHandle-tr { cursor: ne-resize; }
+.resizeHandle-bl { cursor: sw-resize; }
+.resizeHandle-br { cursor: se-resize; }
